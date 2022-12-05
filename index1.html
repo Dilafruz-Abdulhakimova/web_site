@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        justify-content: space-evenly;
+    }
+    .a:hover{
+        transform: scale(1.2);
+    }
+    .b:hover{
+        transform: scale(1.2);
+    }
+    .c:hover{
+        transform: scale(1.2);
+    }
+    .d:hover{
+        transform: scale(1.2);
+    }
+    .a {
+        display: flex;
+        width: 130px;
+        height: 35px;
+        font-size: 25px;
+        cursor: pointer;
+        transition: .5s;
+        border: 1px solid;
+        justify-content: center;
+        align-items: center;
+    }
+    .b{
+        display: flex;
+        width: 130px;
+        height: 35px;
+        font-size: 25px;
+        border: 1px solid;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .c{
+        transition: .5s;
+        display: flex;
+        width: 130px;
+        height: 35px;
+        border: 1px solid;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    .d{
+        transition: .5s;
+        display: flex;
+        width: 130px;
+        height: 35px;
+        font-size: 25px;
+        border: 1px solid;
+        justify-content: center;
+        align-items: center; 
+        margin-left: 20px;
+        cursor: pointer;
+    }
+    a{
+        text-decoration: none;
+        font-size: 20px;
+        color: rgb(61, 32, 71);
+        /* text-decoration-line: inline; */
+        cursor: pointer;
+    }
+    .h{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 23px;
+    }
+    .natija{
+        text-align: center;
+        font-size: 25px;
+    }
+    #keyingi{
+        width: 100%;
+        height: 35px;
+        /* border: 1px solid; */
+        text-align: center;
+        margin-top: 90px;
+        display: none;
+        
+        
+        
+    }
+    #qaytish{
+        width: 100%;
+        height: 35px;
+        /* border: 1px solid; */
+        text-align: center;
+        margin-top: 90px;
+        display: none;
+        
+        
+        
+    }
+
+</style>
+
+
+<body>
+    <div class="h"><h3>Log<sub>2</sub>8=?</h3> </div>
+    <div class="container">
+        
+        <div class="a" id="a" onclick="ikki()">1</div>
+        <div class="b" id="b" onclick="bir()">3</div> 
+        <div class="c" id="c" onclick="ikki()">2</div>
+        <div class="d" id="d" onclick="ikki()">4</div>
+        
+        
+    </div>
+   
+    <script>
+        function bir() {
+           
+            document.getElementById('b').style.backgroundColor='green';
+            document.getElementById('a').style.display="none";
+            document.getElementById('c').style.display="none";
+            document.getElementById('d').style.display="none";
+            document.getElementById('natija').innerHTML="Soz to'g'ri javob berdingiz!";
+            document.getElementById('keyingi').style.display="block";
+            a.removeAttribute('onclick');
+            c.removeAttribute('onclick');
+            d.removeAttribute('onclick');
+
+        }
+        function ikki() {
+            document.getElementById('b').style.backgroundColor='green';
+            document.getElementById('a').style.backgroundColor="red";
+            document.getElementById('c').style.backgroundColor="red";
+            document.getElementById('d').style.backgroundColor="red";
+            document.getElementById('natija').innerHTML="Siz noto`g`ri javob berdingiz";
+            a.removeAttribute('onclick');
+            document.getElementById('qaytish').style.display="block";
+        }
+
+    </script>
+   <p id="natija" class="natija"></p>
+   <a href="./index2.html" id="keyingi">Keyingi savolga otish</a> 
+   <a href="./index1.html" id="qaytish">Savolni qaytadan boshlash</a>
+</body>
+</html>
